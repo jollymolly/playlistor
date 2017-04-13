@@ -1,0 +1,10 @@
+# exclude python3 caches
+__pycache__
+
+# exclude input json data
+*.json
+
+# exclude temp editor's files
+.\#*
+\#*\#
+
