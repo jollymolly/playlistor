@@ -3,9 +3,9 @@ Youtube playlist posting utility
 Playlist(s) description is stored as an input file with the following
 information included:
 
-[*] Name
-[*] Description
-[*] Videos list
+* Name
+* Description
+* Videos list
 
 Input file format: json. 
 
