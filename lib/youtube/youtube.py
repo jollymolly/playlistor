@@ -1,6 +1,9 @@
 #!/bin/env python3
 
-import httplib2, os, sys, json
+import httplib2
+import os
+import sys
+import json
 
 from apiclient.discovery import build
 from apiclient.errors import HttpError
@@ -8,8 +11,9 @@ from oauth2client.client import flow_from_clientsecrets
 from oauth2client.file import Storage
 from oauth2client.tools import run_flow
 
-from lib.ulist.utils import get_cmd_line_parser
+from lib.playlistor.utils import get_cmd_line_parser
 from lib.settings import Settings
+
 
 class YouTube:
     __instance = None
@@ -32,8 +36,8 @@ aaa_client_secrets"
 
     def __setup(self):
         flow = flow_from_clientsecrets(Settings.getSecret(),
-                    message=self.MISSING_CLIENT_SECRETS_MESSAGE,
-                    scope=self.YOUTUBE_READ_WRITE_SCOPE)
+                                       message=self.MISSING_CLIENT_SECRETS_MESSAGE,
+                                       scope=self.YOUTUBE_READ_WRITE_SCOPE)
         storage = Storage("%s-oauth2.json" % sys.argv[0])
         credentials = storage.get()
 
